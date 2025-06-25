@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawasi Hurlingham</title>
+    <style>
+               .container {
+    display: flex;
+}
+
+.container > div {
+    flex: 1;
+}
+    </style>
+    {% include "header.html" %}
+
+</head>
+<body>
+    {% include "navbar.html" %}
+        <section class="row">
+            <div class="col-md-6">
+                <h2>About Kawasi Hurlingham Hostels</h2>
+                <p>Kawasi Hurlingham is home to a vibrant student community of more than 700 residents from various Universities and Colleges such as Daystar University, Strathmore University, Riara University, Catholic University of Eastern Africa (CUEA), BOMA, and many more.</p><br>
+    
+                <p>The residence is just a short walk to Daystar University and a 10-minute drive from Strathmore University and Nairobi CBD. With a friendly and contemporary vibe, Kawasi Hurlingham offers unrivalled student accommodation that’s located perfectly for your studies. At Qwetu Hurlingham , you can expect a stress-free letting process and an exceptional service level that allows you to enjoy your time to socialize, relax and study.</p>
+    
+                <h2><b>Welcome to the ultimate student living experience.</b></h2>
+              </div>
+              
+              <!-- Right section for image -->
+              <div class="col-md-6">
+                <img src="../static/images/apart2.webp" alt="Kawasi hurlingham image missing" height="500px", width="500px">
+                </div>
+
+
+        </section>
+
+        <h1 class="text-center" style="text-decoration: underline;"> Key features at this residence</h1>
+        <h2 class="text-center">Enjoy your stay as you work extremely hard!</h2>
+
+        <div class="container">
+
+          <div><img src="../static/images/music-solid.svg" alt="" width="100px" height="100px"  class="m-4"><br>
+            <h4>Chillout lounge</h4>
+            </div>
+            <div>
+              <img src="../static/images/cart-shopping-solid.svg" alt="" width="100px" height="100px"  class="m-4" >
+              <h4>Mini Mart</h4>
+            </div>
+           <div>
+            <img src="../static/images/couch-solid.svg" alt="" width="100px" height="100px" class="m-4">
+            <h4>3 room types</h4>
+           </div>
+            <div>
+              <img src="../static/images/trash-solid.svg" alt="" width="100px" height="100px" class="m-4">
+              <h4>Garbage collection</h4>
+            </div>
+            <div>
+              <img src="../static/images/dumbbell-solid.svg" alt="" width="100px" height="100px" class="m-4">
+              <h4>Residents gym</h4>
+            </div>
+
+
+
+        </div> <br> <br> <br>
+
+
+
+
+        <h2 class="text-center" style="text-decoration: underline;" >Room Types
+        </h2>
+        <section class="row">
+          <div class="col-md-3">
+            <div class="card shadow">
+              <div class="card-body">
+                <img src="../static/files/premiumhostel2.jpg" alt="" width="100%">
+              </div>
+              <div class="card-footer bg-dark" id="cardFooter" style="align-content: center;">
+                <!-- <h3 class="text-center">Premium Hostel</h3> -->
+                <button class="btn btn-outline-danger me-3 mt-3" type="button" data-bs-toggle="modal" data-bs-target="#mymodal">Premium Hostel</button>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow">
+              <div class="card-body">
+                <img src="../static/images/twinhostel3.jpg" alt="" width="100%">
+              </div>
+              <div class="card-footer bg-dark" id="cardFooter" style="align-content: center;">
+                <!-- <h3 class="text-center">Premium Hostel</h3> -->
+                <button class="btn btn-outline-danger me-3 mt-3" type="button" data-bs-toggle="modal" data-bs-target="#yourmodal">Premium twin Hostel</button>
+              </div>
+            </div>  
+          </div>
+
+          <div class="col-md-3">
+            <div class="card shadow">
+              <div class="card-body">
+                <img src="../static/images/twin hostels.webp" alt="" width="100%">
+              </div>
+              <div class="card-footer bg-dark" id="cardFooter" style="align-content: center;">
+                <!-- <h3 class="text-center">Premium Hostel</h3> -->
+                <button class="btn btn-outline-danger me-3 mt-3" type="button" data-bs-toggle="modal" data-bs-target="#hismodal">Twin hostel</button>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow">
+              <div class="card-body">
+                <img src="../static/images/dorm.webp" alt="" width="100%">
+              </div>
+              <div class="card-footer bg-dark" id="cardFooter" style="align-content: center;">
+                <!-- <h3 class="text-center">Premium Hostel</h3> -->
+                <button class="btn btn-outline-danger me-3 mt-3" type="button" data-bs-toggle="modal" data-bs-target="#hermodal">Dorm Hostel</button>
+              </div>
+            </div>  
+          </div>
+
+
+        </section>
+
+        
+
+        
+
+
+                    <!-- The modal -->
+                    <div class="modal fade" id="mymodal">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <!-- modal header -->
+                             <div class="modal-header">
+                              <h4> Enter your details to book this premium hostel @19,000/= per month</h4>
+                              
+                             </div>
+                             <!-- modal body -->
+                             <div class="modal-body">
+                              <form action="/mpesapayment" method="post">
+                                  <!-- <input type="email" placeholder="Enter your email" class="form-control"> -->
+                                  <input type="number" name="phone" placeholder="Enter your number" class="form-control"> <br>
+                                  <input type="number" name="amount" placeholder="Enter the amount" class="form-control"> <br>
+                                  <input type="submit" value="Pay Now">
+                              </form>
+                             </div>
+                             <!-- modal footer -->
+                             <div class="modal-footer">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                             </div>
+                          </div>
+      
+                      </div>
+      
+                  </div>
+      
+         <!-- The modal -->
+         <div class="modal fade" id="yourmodal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <!-- modal header -->
+                 <div class="modal-header">
+                  <h4> Enter your details to book this premium twin hostel @15,000/= per month</h4>
+                  
+                 </div>
+                 <!-- modal body -->
+                 <div class="modal-body">
+                  <form action="">
+                      <input type="email" placeholder="Enter your email" class="form-control">
+                      <input type="password" placeholder="Enter your password" class="form-control"> <br>
+                      <button type="button" class="btn btn-outline-danger">Submit</button>
+                  </form>
+                 </div>
+                 <!-- modal footer -->
+                 <div class="modal-footer">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                 </div>
+              </div>
+
+          </div>
+
+      </div>
+
+       <!-- The modal -->
+       <div class="modal fade" id="hismodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- modal header -->
+               <div class="modal-header">
+                <h4> Enter your details to book this twin hostel @12,000/= per month</h4>
+                
+               </div>
+               <!-- modal body -->
+               <div class="modal-body">
+                <form action="">
+                    <input type="email" placeholder="Enter your email" class="form-control">
+                    <input type="password" placeholder="Enter your password" class="form-control"> <br>
+                    <button type="button" class="btn btn-outline-danger">Submit</button>
+                </form>
+               </div>
+               <!-- modal footer -->
+               <div class="modal-footer">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+               </div>
+            </div>
+
+        </div>
+
+    </div>
+
+     <!-- The modal -->
+     <div class="modal fade" id="hermodal">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <!-- modal header -->
+             <div class="modal-header">
+              <h4> Enter your details to book a bed in this dorm hostel @7,000/= per month</h4>
+              
+             </div>
+             <!-- modal body -->
+             <div class="modal-body">
+              <form action="">
+                  <input type="email" placeholder="Enter your email" class="form-control">
+                  <input type="password" placeholder="Enter your password" class="form-control"> <br>
+                  <button type="button" class="btn btn-outline-danger">Submit</button>
+              </form>
+             </div>
+             <!-- modal footer -->
+             <div class="modal-footer">
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+             </div>
+          </div>
+
+      </div>
+
+  </div>
+
+  {% include 'footer.html' %}
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>houses</title>
+    {% include 'header.html' %}
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <br><br>
+
+    <form action="/houses" method="post">
+
+        <h3 style="color: green;">{{success}}</h3>
+
+        <label>Number of bedrooms: </label><br>
+        <input type="text" name="bedrooms" placeholder="Enter the number of bedrooms"> <br>
+
+        <label>Number of lights: </label><br>
+        <input type="text" name="lights" placeholder="Enter the number of lights"><br>
+
+        <label>Number of wardrobe: </label><br>
+        <input type="text" name="wardrobe" placeholder="Enter the number of wardrobe"> <br> <br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

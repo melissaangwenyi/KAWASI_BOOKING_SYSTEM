@@ -1,0 +1,52 @@
+<section class="row">
+    <div class="col-md-12">
+        <nav class="navbar navbar-expand-md navbar-light btn-light p-3">
+            <a href="/" class="navbar-brand">KAWASI <b class="text-success">HOSTELS</b></a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    {% if session['key'] %}
+                    <a href="/" class="nav-item nav-link">Home</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="residenciesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Residencies</a>
+                        <ul class="dropdown-menu" aria-labelledby="residenciesDropdown">
+                            <li><a class="dropdown-item" href="/residencies1">Kawasi Parklands</a></li>
+                            <li><a class="dropdown-item" href="/residencies2">Kawasi Hurlingham</a></li>
+                            <!-- Add more dropdown items as needed -->
+                        </ul>
+                    </div>
+                    <a href="/universities" class="nav-item nav-link">Universities</a>
+                    <a href="/reviews" class="nav-item nav-link">Reviews</a>
+                    {% else %}
+                    <a href="/" class="nav-item nav-link">Home</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="residenciesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Residencies</a>
+                        <ul class="dropdown-menu" aria-labelledby="residenciesDropdown">
+                            <li><a class="dropdown-item" href="/residencies1">Kawasi Parklands</a></li>
+                            <li><a class="dropdown-item" href="/residencies2">Kawasi Hurlingham</a></li>
+                            <!-- Add more dropdown items as needed -->
+                        </ul>
+                    </div>
+                    <a href="/universities" class="nav-item nav-link">Universities</a>
+                    <a href="/reviews" class="nav-item nav-link">Reviews</a>
+                    {% endif %}
+                </div>
+                <div class="navbar-nav ms-auto">
+                    <!-- TODO Logout -->
+                    {% if session['key'] %}
+                    <p class="me-2">Hello:{{session['key']}}</p>
+                    <a href="/booknow" class="btn  btn-success nav-item nav-link me-3">Book Now</a>
+                    <a href="/logout" class="btn  btn-danger nav-item nav-link">Logout</a>
+                    {% else %}
+                    <a href="/login"><input type="button" value="Login" class="btn btn-success me-2"></a>
+                    <a href="/register"><input type="button" value="Register" class="btn btn-success me-2"></a>
+                    {% endif %}
+                </div>
+            </div>
+        </nav>
+    </div>
+</section>
+

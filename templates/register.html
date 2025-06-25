@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    {%include'header.html'%}
+</head>
+<body>
+    {%include 'navbar.html'%}
+
+    <section class="row">
+        <div class="col-md-6 p-4">
+            <div class="card shadow p-3">
+                <H3 class="text-warning">{{error}}</H3>
+                <h3 class="text-success">{{success}}</h3>
+                <form action="/register" method="post">
+                    <label>Username:</label>
+                    <input type="text" name="username" placeholder="Enter your username" class="form-control" required>
+                    <label>Password:</label>
+                    <input type="password" name="password1" placeholder="Enter the password" class="form-control" required>
+                    <label>Confirm Password:</label>
+                    <input type="password" name="password2" placeholder="Kindly confirm your password" class="form-control" required>
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="Enter your email address" class="form-control" required>
+                    <label>Phone number:</label>
+                    <input type="text" name="phone" placeholder="Enter your phone number format
+                    +2547...  " class="form-control" required> <br>
+                    <input type="submit" value="Register"class="btn btn-success">
+                </form>
+            </div>
+ 
+        </div>
+        <div class="col-md-6"></div>
+    </section>
+    {%include "footer.html"%}
+</body>
+</html>

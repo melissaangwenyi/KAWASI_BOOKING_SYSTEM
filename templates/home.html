@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-r4Hygv7vtpjIdAislswUAa7vp6LpP2PIY9wvBWRt4nHL1SFOeVeeKYIa6jo4+gD+" crossorigin="anonymous">
+    <style>
+        /* Style for the left and right sections */
+        .left-section, .right-section {
+          width: 50%;
+          height: 100vh; /* Set height to full viewport height */
+          float: left; /* Float left so they appear side by side */
+          box-sizing: border-box;
+          padding: 20px;
+        }
+        
+        /* Style for the text section */
+        .left-section {
+          background-color: #f0f0f0; /* Light gray background */
+        }
+        
+        /* Style for the image section */
+        .right-section {
+          background-image: url('your-image-url.jpg'); /* Replace 'your-image-url.jpg' with the URL of your image */
+          background-size: cover;
+          background-position: center;
+        }
+        
+        /* Clear floats after the sections */
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+
+        .container {
+    display: flex;
+}
+
+.container > div {
+    flex: 1;
+}
+
+      </style>
+</head>
+{% include 'header.html' %}
+<body>
+    {% include "navbar.html" %}
+    <div class="container-fluid">
+
+        <div class="left-section">
+            <h2>About Kawasi Hostels</h2>
+            <p>Welcome to Kawasi hostels, a vibrant community nestled just a short stroll away from the University of Nairobi, Kenyatta University, Kabarack University and Strathmore university. Our vibrant community will be home to an extensive student community from esteemed universities and colleges like the University of Nairobi, Aga Khan University, Edulink International College, Graffins College, Bridge College, Baristapro Kenya, Oshwal College, ADMI, Nairobi Bar School, Kenya Methodist University, Nairobi Institute of Technology (N.I.T), and many more. With such diversity, we provide a much-needed option for student accommodation in the Riverside area.</p><br>
+
+            <p>At Kawasi, we offer the best for our residents, ensuring an exceptional living experience. We have gone the extra mile to create an environment where you can create unforgettable memories with your friends, during your student years.</p>
+
+            <p>Your perfect spot awaits at Kawasi, so why wait? Book your accommodation for you and your squad today, and embark on an amazing student-living experience.</p>
+          </div>
+          
+          <!-- Right section for image -->
+          <div class="right-section">
+            {% include "carousel.html" %}
+            </div>
+          
+          
+
+        <h1 class="text-center" style="text-decoration: underline;"> Key features at this residence</h1>
+        <h2 class="text-center">Enjoy your stay as you work extremely hard!</h2>
+
+        <div class="container">
+
+          <div><img src="../static/images/music-solid.svg" alt="" width="100px" height="100px"  class="m-4"><br>
+            <h4>Chillout lounge</h4>
+            </div>
+            <div>
+              <img src="../static/images/cart-shopping-solid.svg" alt="" width="100px" height="100px"  class="m-4" >
+              <h4>Mini Mart</h4>
+            </div>
+           <div>
+            <img src="../static/images/couch-solid.svg" alt="" width="100px" height="100px" class="m-4">
+            <h4>3 room types</h4>
+           </div>
+            <div>
+              <img src="../static/images/trash-solid.svg" alt="" width="100px" height="100px" class="m-4">
+              <h4>Garbage collection</h4>
+            </div>
+            <div>
+              <img src="../static/images/dumbbell-solid.svg" alt="" width="100px" height="100px" class="m-4">
+              <h4>Residents gym</h4>
+            </div>
+
+
+
+        </div> <br> <br> <br>
+
+
+
+
+        <h2 class="text-center" style="text-decoration: underline;" >Room Types
+        </h2>
+        <section class="row">
+          <div class="col-md-3">
+            <div class="card shadow">
+              <div class="card-body">
+                <img src="../static/images/premiumhostel2.jpg" alt="" width="100%">
+              </div>
+              <div class="card-footer bg-dark" id="cardFooter" style="align-content: center;">
+                <!-- <h3 class="text-center">Premium Hostel</h3> -->
+                <button class="btn btn-outline-danger me-3 mt-3" type="button" data-bs-toggle="modal" data-bs-target="#mymodal">Premium Hostel</button>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow">
+              <div class="card-body">
+                <img src="../static/images/twinhostel3.jpg" alt="" width="100%">
+              </div>
+              <div class="card-footer bg-dark" id="cardFooter" style="align-content: center;">
+                <!-- <h3 class="text-center">Premium Hostel</h3> -->
+                <button class="btn btn-outline-danger me-3 mt-3" type="button" data-bs-toggle="modal" data-bs-target="#yourmodal">Premium twin Hostel</button>
+              </div>
+            </div>  
+          </div>
+
+          <div class="col-md-3">
+            <div class="card shadow">
+              <div class="card-body">
+                <img src="../static/images/twin hostels.webp" alt="" width="100%">
+              </div>
+              <div class="card-footer bg-dark" id="cardFooter" style="align-content: center;">
+                <!-- <h3 class="text-center">Premium Hostel</h3> -->
+                <button class="btn btn-outline-danger me-3 mt-3" type="button" data-bs-toggle="modal" data-bs-target="#hismodal">Twin hostel</button>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow">
+              <div class="card-body">
+                <img src="../static/images/dorm.webp" alt="" width="100%">
+              </div>
+              <div class="card-footer bg-dark" id="cardFooter" style="align-content: center;">
+                <!-- <h3 class="text-center">Premium Hostel</h3> -->
+                <button class="btn btn-outline-danger me-3 mt-3" type="button" data-bs-toggle="modal" data-bs-target="#hermodal">Dorm Hostel</button>
+              </div>
+            </div>  
+          </div>
+
+
+        </section>
+
+        
+
+        
+
+
+                    <!-- The modal -->
+                    <div class="modal fade" id="mymodal">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <!-- modal header -->
+                             <div class="modal-header">
+                              <h4> Enter your details to book this premium hostel @19,000/= per month</h4>
+                              
+                             </div>
+                             <!-- modal body -->
+                             <div class="modal-body">
+                              <form action="/mpesapayment" method="post">
+                                  <!-- <input type="email" placeholder="Enter your email" class="form-control"> -->
+                                  <input type="number" name="phone" placeholder="Enter your number" class="form-control"> <br>
+                                  <input type="number" name="amount" placeholder="Enter the amount" class="form-control"> <br>
+                                  <input type="submit" class="btn btn-outline-danger" value="Pay Now">
+                              </form>
+                             </div>
+                             <!-- modal footer -->
+                             <div class="modal-footer">
+                              <button type="aubmit" class="btn-close" data-bs-dismiss="modal"></button>
+                             </div>
+                          </div>
+      
+                      </div>
+      
+                  </div>
+      
+         <!-- The modal -->
+         <div class="modal fade" id="yourmodal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <!-- modal header -->
+                 <div class="modal-header">
+                  <h4> Enter your details to book this premium twin hostel @15,000/= per month</h4>
+                  
+                 </div>
+                 <!-- modal body -->
+                 <div class="modal-body">
+                  <form action="/mpesapayment" method="post">
+                    <input type="number" name="phone" placeholder="Enter your number" class="form-control"> <br>
+                    <input type="number" name="amount" placeholder="Enter the amount" class="form-control"> <br>
+                      <button type="submit" class="btn btn-outline-danger" >Pay now</button>
+                  </form>
+                 </div>
+                 <!-- modal footer -->
+                 <div class="modal-footer">
+                  <button type="submit" class="btn-close" data-bs-dismiss="modal"></button>
+                 </div>
+              </div>
+
+          </div>
+
+      </div>
+
+       <!-- The modal -->
+       <div class="modal fade" id="hismodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- modal header -->
+               <div class="modal-header">
+                <h4> Enter your details to book this twin hostel @12,000/= per month</h4>
+                
+               </div>
+               <!-- modal body -->
+               <div class="modal-body">
+                <form action="/mpesapayment" method="post">
+                  <input type="number" name="phone" placeholder="Enter your number" class="form-control"> <br>
+                  <input type="number" name="amount" placeholder="Enter the amount" class="form-control"> <br>
+                    <button type="submit" class="btn btn-outline-danger" >Pay Now</button>
+                </form>
+               </div>
+               <!-- modal footer -->
+               <div class="modal-footer">
+                <button type="submit" class="btn-close" data-bs-dismiss="modal"></button>
+               </div>
+            </div>
+
+        </div>
+
+    </div>
+
+     <!-- The modal -->
+     <div class="modal fade" id="hermodal">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <!-- modal header -->
+             <div class="modal-header">
+              <h4> Enter your details to book a bed in this dorm hostel @7,000/= per month</h4>
+              
+             </div>
+             <!-- modal body -->
+             <div class="modal-body">
+              <form action="/mpesapayment" method="post">
+                <input type="number" name="phone" placeholder="Enter your number" class="form-control"> <br>
+                <input type="number" name="amount" placeholder="Enter the amount" class="form-control"> <br>
+                  <button type="submit" class="btn btn-outline-danger">Pay Now</button>
+              </form>
+             </div>
+             <!-- modal footer -->
+             <div class="modal-footer">
+              <button type="submit" class="btn-close" data-bs-dismiss="modal"></button>
+             </div>
+          </div>
+
+      </div>
+
+  </div>
+  {% include 'footer.html' %}
+        
+</body>
+</html>

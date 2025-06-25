@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single item</title>
+    {% include 'header.html'%}
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <h2 class="text-danger text-center">Single item</h2>
+    <section class="row">
+        <div class="col-md-4 p-3">
+            <img src="../static/images/{{product[5]}}" alt="" height="300px" class="img-thumbnail shadow p-4"/>
+            <h3 class="text-center text-success">{{product[1]}}</h3>
+        </div>
+        <div class="col-md-8">
+            <p class="text-muted">{{product[2]}}</p>
+            <h4>KES: &nbsp;<span class="text-warning">{{product[3]}}</span></h4>
+            <h4>category: &nbsp;<span class="text-primary">{{product[4]}}</span></h4>
+        </div>
+    </section><br>
+    <section class="row">
+        <div class="col-md-6 P-4" >
+            {% if session['key'] %}
+            <form action="">
+               <form action="/mpesapayment" method="post">
+                <label>Phone number:</label>
+                <input type="number" class="form-control" name="phone" placeholder="Enter the phonenumber form 2547...">
+                <label >Price:</label>
+                <input type="number" class="form-control" readonly name="amount" value="{{product[3]}}">
+                <input type="submit"  class="btn btn-success" value="Pay now" >
+                <br>
+               </form>
+            </form>
+            {% else %}
+            <h4><b>Please login or sign up to make payment</b></h4>
+            <a href="/login" class="btn btn-outline-success">Login here</a>
+            {% endif %}
+        </div>
+        <div class="col-md-6"></div>
+
+    </section>
+    <br>
+    <h3>Customer who viewed this also viewed</h3>
+    {% for item in similar %}
+    <img src="../static/images/{{item[5]}}" alt="" height="100" width="100">
+    {% endfor %}
+    
+</body>
+</html>

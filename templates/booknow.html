@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+</head>
+<body>
+    {%include "header.html"%}
+    {%include "navbar.html"%}
+    <h3 class="text-success">{{success}}</h3>
+    <form action="/booknow" method="post">
+        <i class="text-danger"><h4 >Please fill out the form below to secure a spot in kawasi hostels</h4></i>
+        <fieldset>
+            
+            <legend>CONTACT DETAILS</legend>
+            <label for=" first name">First Name</label>
+            <input type="text" name="FirstName" placeholder="enter your first name"><br><br>
+
+            <label for=" last name">Last Name</label>
+            <input type="text" name="LastName" placeholder="enter your last name"><br><br>
+    
+            <label for="telephone number">Telephone Number</label>
+            <input type="telephone number" name="TelephoneNumber" placeholder="Enter your telephone number"><br><br>
+
+            <label for="email">Email</label>
+            <input type="email" name="Email"placeholder="Enter your email "><br><br>
+    
+        </fieldset>
+
+
+        <fieldset>
+            <legend>PERSONAL DETAILS</legend>
+            <label for="Age">Age</label>
+            <input type="your age" name="Age"placeholder="your age"><br><br>
+
+
+            <legend>GENDER</legend>
+            <input name= "Gender"type="radio" value="Male">Male 
+            <input name = "Gender" type="radio" value="Female">Female <br> <br>
+
+
+            <label for="universities">Choose a university:</label><br>
+  <select id="universities" name="University">
+    <option value="uon">University of Nairobi</option>
+    <option value="ku">Kenyatta University</option>
+    <option value="mu">Moi University</option>
+    <option value="egerton">Egerton University</option>
+    <option value="jkua">Jomo Kenyatta University of Agriculture and Technology</option>
+    <option value="kcau">KCA University</option>
+    <option value="strathmore">Strathmore University</option>
+    <option value="usiu">United States International University Africa</option>
+    <option value="daystar">Daystar University</option>
+    <option value="aau">African Azarene University</option>
+    <option value="kemu">Kenya Methodist University</option>
+    <option value="egerton">Egerton University</option>
+    <option value="mkua">Mount Kenya University</option>
+    <option value="jkua">Jaramogi Oginga Odinga University of Science and Technology</option>
+    <option value="tu">Technical University of Kenya</option>
+    <option value="dhu">Dedan Kimathi University of Technology</option>
+    <option value="kemu">Kenya Medical Training College</option>
+    <option value="cu">Catholic University of Eastern Africa</option>
+    <option value="kcau">Kenya College of Accountancy University</option>
+    <option value="mku">Machakos University</option>
+    <!-- Add more universities as needed -->
+  </select><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>PICK YOUR ROOM TYPE</legend>
+            <input name= "RoomType"type="radio" value="Premium">premium 
+            <input name = "RoomType" type="radio" value="Double">double
+            <input name="RoomType" type="radio" value="Quad">quad
+            <input name="RoomType" type="radio" value="Dorm">dorm
+        </fieldset><br>
+        <input type="submit" value="BOOK HOSTEL">
+
+    </form>
+</body>
+</html>

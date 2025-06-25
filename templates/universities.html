@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kenyan Universities</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    background-color: #678;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content p {
+    padding: 10px;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+  {%include "header.html"%}
+  {%include "navbar.html"%}
+
+<h2>List of Kenyan Universities</h2>
+
+<ul>
+  <li class="dropdown">
+    <strong>University of Nairobi:</strong>
+    <div class="dropdown-content">
+      <p>The University of Nairobi is a collegiate research university based in Nairobi. It is the largest and oldest university in Kenya.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Kenyatta University:</strong>
+    <div class="dropdown-content">
+      <p>Kenyatta University is a public university located in Nairobi. It is one of the largest universities in Kenya.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Moi University:</strong>
+    <div class="dropdown-content">
+      <p>Moi University is a public university located in Eldoret. It was established in 1984.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Egerton University:</strong>
+    <div class="dropdown-content">
+      <p>Egerton University is a public university located in Njoro, Nakuru County. It was established in 1939.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Jomo Kenyatta University of Agriculture and Technology (JKUAT):</strong>
+    <div class="dropdown-content">
+      <p>JKUAT is a public university located in Juja, near Nairobi. It specializes in technology and agriculture-related courses.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>KCA University:</strong>
+    <div class="dropdown-content">
+      <p>KCA University is a private university located in Nairobi. It offers various courses in business, technology, and related fields.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Strathmore University:</strong>
+    <div class="dropdown-content">
+      <p>Strathmore University is a private university located in Nairobi. It is known for its business, accountancy, and finance programs.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>United States International University Africa (USIU-Africa):</strong>
+    <div class="dropdown-content">
+      <p>USIU-Africa is a private university located in Nairobi. It offers American-style education with global perspectives.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Daystar University:</strong>
+    <div class="dropdown-content">
+      <p>Daystar University is a private university with campuses in Nairobi and Athi River. It is a Christian university offering various programs.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>African Nazarene University (ANU):</strong>
+    <div class="dropdown-content">
+      <p>ANU is a private Christian university located in Ongata Rongai, Nairobi. It offers undergraduate and postgraduate programs.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Kenya Methodist University (KEMU):</strong>
+    <div class="dropdown-content">
+      <p>KEMU is a private university located in Meru, with campuses in Nairobi and Mombasa. It offers programs in various fields.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Maseno University:</strong>
+    <div class="dropdown-content">
+      <p>Maseno University is a public university located in Maseno, Kisumu County. It offers undergraduate and postgraduate programs.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Mount Kenya University (MKU):</strong>
+    <div class="dropdown-content">
+      <p>MKU is a private university with campuses across Kenya. It offers programs in various disciplines.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Jaramogi Oginga Odinga University of Science and Technology (JOOUST):</strong>
+    <div class="dropdown-content">
+      <p>JOOUST is a public university located in Bondo, Siaya County. It offers programs in science and technology.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Technical University of Kenya (TU-K):</strong>
+    <div class="dropdown-content">
+      <p>TU-K is a public technical university located in Nairobi. It offers programs in engineering, applied sciences, and technology.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Dedan Kimathi University of Technology (DeKUT):</strong>
+    <div class="dropdown-content">
+      <p>DeKUT is a public university located in Nyeri. It specializes in science, engineering, and technology-related courses.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Kisii University:</strong>
+    <div class="dropdown-content">
+      <p>Kisii University is a public university located in Kisii. It offers undergraduate and postgraduate programs.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Cooperative University of Kenya:</strong>
+    <div class="dropdown-content">
+      <p>The Cooperative University of Kenya is a public university located in Karen, Nairobi. It specializes in cooperative-related education.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Pwani University:</strong>
+    <div class="dropdown-content">
+      <p>Pwani University is a public university located in Kilifi. It offers programs in various disciplines.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>South Eastern Kenya University (SEKU):</strong>
+    <div class="dropdown-content">
+      <p>SEKU is a public university located in Kitui. It offers programs in arts, science, and education.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>University of Eldoret:</strong>
+    <div class="dropdown-content">
+      <p>The University of Eldoret is a public university located in Eldoret. It offers undergraduate and postgraduate programs.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Taita Taveta University (TTU):</strong>
+    <div class="dropdown-content">
+      <p>TTU is a public university located in Voi. It offers programs in science, technology, and education.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Laikipia University:</strong>
+    <div class="dropdown-content">
+      <p>Laikipia University is a public university located in Nyahururu. It offers programs in various fields.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Rongo University:</strong>
+    <div class="dropdown-content">
+      <p>Rongo University is a public university located in Rongo, Migori County. It offers undergraduate and postgraduate programs.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Murang'a University of Technology (MUT):</strong>
+    <div class="dropdown-content">
+      <p>MUT is a public university located in Murang'a. It specializes in technology and engineering-related courses.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Meru University of Science and Technology (MUST):</strong>
+    <div class="dropdown-content">
+      <p>MUST is a public university located in Meru. It offers programs in science, technology, and education.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Karatina University:</strong>
+    <div class="dropdown-content">
+      <p>Karatina University is a public university located in Karatina. It offers undergraduate and postgraduate programs.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>University of Kabianga:</strong>
+    <div class="dropdown-content">
+      <p>The University of Kabianga is a public university located in Kericho. It offers programs in various disciplines.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Chuka University:</strong>
+    <div class="dropdown-content">
+      <p>Chuka University is a public university located in Chuka, Tharaka Nithi County. It offers undergraduate and postgraduate programs.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Maasai Mara University:</strong>
+    <div class="dropdown-content">
+      <p>Maasai Mara University is a public university located in Narok. It offers programs in various fields.</p>
+    </div>
+  </li>
+  <li class="dropdown">
+    <strong>Kibabii University:</strong>
+    <div class="dropdown-content">
+      <p>Kibabii University is a public university located in Bungoma. It offers undergraduate and postgraduate programs.</p>
+    </div>
+  </li>
+  <!-- Add more universities with descriptions as needed -->
+</ul>
+
+<script>
+  const dropdowns = document.querySelectorAll('.dropdown');
+
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', () => {
+      dropdown.querySelector('.dropdown-content').classList.toggle('active');
+    });
+  });
+</script>
+
+{%include "footer.html"%}
+
+</body>
+</html>
+
+
