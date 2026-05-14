@@ -1,104 +1,72 @@
-# 🏠 Kawasi Hostels Booking System
-*Where Finding Your Perfect Room is Just a Few Clicks Away (No More Sleepless Nights on Park Benches!)*
+# Kawasi Hostels Booking System
 
-## 🎯 What's This All About?
+A full-stack web application for student hostel booking, built to streamline the accommodation process for university students in Kenya. Students can register, browse available rooms, make payments via M-Pesa, and receive SMS confirmations without visiting the hostel in person.
 
-Tired of students wandering around campus like lost puppies looking for accommodation? Fear not! Kawasi Hostels Booking System is here to save the day (and your sleep schedule). This full-stack web application makes hostel booking so smooth, even your grandmother could book a room for her college reunion! 
+## Overview
 
-## 🚀 Features That'll Make You Go "WOW!"
+Kawasi was developed as a practical solution to the manual and time-consuming hostel booking processes common at Kenyan universities. The system handles the complete booking workflow from registration through to payment confirmation.
 
-### For Students (The Broke but Hopeful Ones):
-- **User Authentication**: Because we need to know you're not a random person trying to crash in our hostels
-- **Smart Booking Workflow**: Tell us about yourself, your university, and room preferences (single bed or are you okay with a roommate who snores?)
-- **SMS Notifications**: Get instant confirmations faster than your crush leaves you on read
-- **M-Pesa Integration**: Pay with your phone because who carries cash anymore? (This isn't 2005!)
-- **Review System**: Rate your stay and warn others about that one roommate who microwaves fish at 2 AM
+## Features
 
-### For Admins (The Heroes Behind the Scenes):
-- **House Management**: Add, edit, or remove properties with the power of a digital landlord
-- **Booking Oversight**: Monitor all bookings because someone has to keep track of who's sleeping where
-- **Review Monitoring**: Read student reviews and laugh at the creative ways they describe their experiences
+**Student Portal**
+- User registration and login with session management
+- Personal profile and booking details capture (name, university, room preferences, contact information)
+- Room browsing with property listings and detail views
+- M-Pesa STK Push payment integration — payment prompt sent directly to the student's phone
+- SMS confirmation sent to the student's phone number on successful registration
 
-## 🛠 Tech Stack (The Cool Stuff Under the Hood)
+**Admin Portal**
+- Property and room management (add, edit, remove listings)
+- Review and feedback management
 
-- **Backend**: Python Flask (Because life's too short for complicated frameworks)
-- **Database**: MySQL (Storing data like a digital hoarder, but organized)
-- **Frontend**: HTML Templates (Simple but effective, like a good cup of coffee)
-- **Payment**: M-Pesa STK Push API (Money moves faster than gossip in a hostel)
-- **Notifications**: SMS API (Because sliding into DMs is so last year)
+## Tech Stack
 
-## 📱 How It Works (The Magic Explained)
+- **Backend:** Python, Flask
+- **Database:** MySQL
+- **Frontend:** HTML, Bootstrap 5
+- **Payment:** M-Pesa Daraja API (STK Push, sandbox)
+- **Notifications:** SMS API
 
-1. **Register/Login**: Create an account (no, "password123" is not acceptable)
-2. **Fill Your Details**: Tell us about yourself (we promise not to judge your course choices)
-3. **Choose Your Castle**: Browse available rooms and pick your temporary kingdom
-4. **Pay Up**: M-Pesa integration makes payment smoother than your pickup lines
-5. **Get Confirmation**: Receive SMS faster than you can say "accommodation sorted!"
-6. **Move In**: Pack your bags and prepare for the hostel life adventure
+## Project Structure
 
-## 🔧 Installation (For the Brave Souls)
-
-```bash
-# Clone this masterpiece
-git clone https://github.com/melissamoraa/MYMODCOMFINALPROJECT.git
-
-# Navigate to the project (don't get lost now)
-cd MYMODCOMFINALPROJECT
-
-# Install dependencies (make sure you have Python installed, this isn't magic)
-pip install -r requirements.txt
-
-# Set up your database (MySQL required - it's worth it, trust me)
-# Create database and run migrations
-
-# Configure your environment variables
-# Add your M-Pesa credentials, SMS API keys, and database credentials
-# (Keep them secret, keep them safe!)
-
-# Run the application
-python app.py
-
-# Visit http://localhost:5000 and watch the magic happen!
+```
+KAWASI_BOOKING_SYSTEM/
+├── app.py          # Flask application and all routes
+├── sms.py          # SMS notification helper
+├── nav.html        # Navigation template
+├── static/         # Bootstrap CSS and static assets
+└── templates/      # HTML templates (login, register, booknow, houses, reviews, etc.)
 ```
 
-## 🎭 Screenshots (Coming Soon!)
-*Because a picture is worth a thousand words, and we all know you'd rather see than read*
+## Setup
 
-## 🐛 Known Issues (AKA "It's Not a Bug, It's a Feature")
+**Prerequisites:** Python 3.8+, MySQL
 
-- Occasionally, the system might be too efficient and book you a room before you finish thinking about it
-- The review system might make you laugh so hard you forget why you came here
-- M-Pesa integration works so well, you might accidentally pay twice (we're working on refunds... maybe)
+```bash
+git clone https://github.com/melissaangwenyi/KAWASI_BOOKING_SYSTEM.git
+cd KAWASI_BOOKING_SYSTEM
+pip install flask pymysql requests
+```
 
-## 🤝 Contributing
+Create a MySQL database named `project` and set up the required tables (register, booknow, housedetails, reviews).
 
-Want to make this even more awesome? Here's how:
-1. Fork the repository (because sharing is caring)
-2. Create a branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request and convince us why your idea is brilliant
+Configure your credentials in `app.py`:
+```python
+# Database
+connection = pymysql.connect(host="localhost", user="root", password="your_password", database="project")
 
-## 📞 Support
+# M-Pesa (replace with your Daraja API credentials)
+consumer_key = "your_consumer_key"
+consumer_secret = "your_consumer_secret"
+```
 
-Having issues? Found a bug? Just want to chat about the meaning of life?
-- Email: melissaangwenyi@gmail.com
-- GitHub Issues: [Report Here](https://github.com/melissamoraa/MYMODCOMFINALPROJECT/issues)
-- Prayer: Sometimes it works, we don't judge
+Run the application:
+```bash
+python app.py
+```
 
-## 📄 License
+Visit `http://localhost:5000`
 
-This project is licensed under the "Do Whatever You Want But Give Credit" License.
+## Author
 
-## 🙏 Acknowledgments
-
-- Coffee shops that stayed open late during development
-- Stack Overflow for being the real MVP
-- My computer for not crashing during those 3 AM coding sessions
-- Everyone who believed this was possible (all 3 of you)
-
----
-
-*Built with ❤️, lots of ☕, and the occasional 😭 by Melissa Angwenyi*
-
-**Remember**: Life's too short for bad accommodation. Choose Kawasi! 🏠✨
+Melissa Angwenyi — melissaangwenyi276@gmail.com
